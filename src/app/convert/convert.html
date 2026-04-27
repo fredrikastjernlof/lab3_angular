@@ -7,6 +7,19 @@
             <option value="temperature">Temperatur (Celsius / Fahrenheit)</option>
         </select>
     </label>
+
+    @if (selectedConverter === 'length') {
+    <app-curiosity-box title="Visste du att..."
+        text="Världens högsta skyskrapa, Burj Khalifa, är 828 meter hög. Det motsvarar ungefär 2 717 fot.">
+    </app-curiosity-box>
+    }
+
+    @if (selectedConverter === 'temperature') {
+    <app-curiosity-box title="Hett värre..."
+        text="Världens högsta officiellt uppmätta lufttemperatur är 56,7°C i Death Valley, California, USA. Det motsvarar ungefär 134°F.">
+    </app-curiosity-box>
+    }
+
     @if (selectedConverter === 'length') {
     <div class="converter-card">
         <h3>Meter och fot</h3>
@@ -28,7 +41,7 @@
     </div>
     }
 
-@if (selectedConverter === 'temperature') {
+    @if (selectedConverter === 'temperature') {
     <div class="converter-card">
         <h3>Celsius och Fahrenheit</h3>
         <div class="input-group">
@@ -47,5 +60,5 @@
         </p>
 
     </div>
-}
+    }
 </section>

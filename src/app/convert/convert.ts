@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CuriosityBox } from '../components/curiosity-box/curiosity-box';
 
 @Component({
   selector: 'app-convert',
-  imports: [FormsModule],
+  imports: [FormsModule, CuriosityBox],
   templateUrl: './convert.html',
   styleUrl: './convert.scss',
 })
