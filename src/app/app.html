@@ -1,6 +1,11 @@
-<h1>Min angular applikation</h1>
-<app-main-nav></app-main-nav>
-<main>
-<router-outlet/>
-</main>
-
+  <button type="button" (click)="focusMainContent()"class="skip-link">Hoppa till innehåll</button>
+  <header>
+    <h1 class="logo">QuickConvert</h1>
+  </header>
+  <app-main-nav></app-main-nav>
+  <main id="main-content" tabindex="-1">
+    <router-outlet (activate)="focusMainContent()" />
+  </main>
+  <footer>
+    <p>&copy; 2026 QuickConvert av Fredrika Stjernlöf. All rights reserved.</p>
+  </footer>

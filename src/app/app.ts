@@ -10,4 +10,9 @@ import { MainNav } from "./main-nav/main-nav";
 })
 export class App {
   protected readonly title = signal('lab3_Angular');
+
+  focusMainContent() {
+    const mainContent = document.getElementById('main-content');
+    mainContent?.focus();
+  }
 }
