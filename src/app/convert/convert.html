@@ -1,1 +1,51 @@
-<p>convert works!</p>
+<section class="convert">
+    <h2>Convert</h2>
+    <label>
+        Välj vad du vill omvandla:
+        <select [(ngModel)]="selectedConverter">
+            <option value="length">Längd (meter / fot)</option>
+            <option value="temperature">Temperatur (Celsius / Fahrenheit)</option>
+        </select>
+    </label>
+    @if (selectedConverter === 'length') {
+    <div class="converter-card">
+        <h3>Meter och fot</h3>
+        <div class="input-group">
+            <label>
+                Meter
+                <input type="number" [(ngModel)]="meters" (input)="convertToFeet()" />
+            </label>
+            <label>
+                Fot
+                <input type="number" [(ngModel)]="feet" (input)="convertToMeters()" />
+            </label>
+        </div>
+
+        <p class="result">
+            {{ meters }} meter är ungefär <strong>{{ feet }}</strong> fot.
+        </p>
+
+    </div>
+    }
+
+@if (selectedConverter === 'temperature') {
+    <div class="converter-card">
+        <h3>Celsius och Fahrenheit</h3>
+        <div class="input-group">
+            <label>
+                Celsius
+                <input type="number" [(ngModel)]="celsius" (input)="convertToFahrenheit()" />
+            </label>
+            <label>
+                Fahrenheit
+                <input type="number" [(ngModel)]="fahrenheit" (input)="convertToCelsius()" />
+            </label>
+        </div>
+
+        <p class="result">
+            {{ celsius }}°C är ungefär <strong>{{ fahrenheit }}</strong>°F.
+        </p>
+
+    </div>
+}
+</section>
