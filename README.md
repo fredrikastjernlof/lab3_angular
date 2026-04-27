@@ -91,7 +91,7 @@ Global styling har separerats från komponent-specifik styling för att göra ko
 
 Webbplatsen är publicerad via netlify:
 
-[Öppna webbplats](Länk här)
+[Öppna webbplats](https://lab3-angular.netlify.app/)
 
 
 
