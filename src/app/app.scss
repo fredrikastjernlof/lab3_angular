@@ -1,0 +1,69 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #0d250f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 2rem 3rem;
+    background-color: #0d250f;
+    box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-family: "Mansalva", sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+main {
+    flex: 1; // Gör så att main tar upp all tillgänglig plats mellan header och footer
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 2rem 3rem;
+    background-color: #0d250f;
+    box-shadow: 0 -8px 20px -8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    max-width: none;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    :host {
+        padding-bottom: 4rem; // Ger plats att scrolla förbi bakom menyn
+    }
+}
