@@ -1,13 +1,22 @@
 <nav class="main-nav">
     <ul>
-        <li>
-            <a routerLink="home">Start</a>
+        <li routerLinkActive="current">
+            <a routerLink="about">
+                <span class="icon">info</span>
+                <span class="text">Om</span>
+            </a>
         </li>
-        <li>
-            <a routerLink="convert">Omvandlare</a>
+        <li routerLinkActive="current">
+            <a routerLink="convert">
+                <span class="icon">swap_horiz</span>
+                <span class="text">Omvandlare</span>
+            </a>
         </li>
-        <li>
-            <a routerLink="about">Om uppgiften</a>
+        <li routerLinkActive="current">
+            <a routerLink="home">
+                <span class="icon">home</span>
+                <span class="text">Start</span>
+            </a>
         </li>
     </ul>
 </nav>
